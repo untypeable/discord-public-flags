@@ -24,12 +24,6 @@ flags = {
 
 things = []
 
-for item in flags.keys():
-    if public_flags == item:
-        things.append(flags[item][0])
-        print(flags[item][0])
-        break
-
 while public_flags != 0:
     for item in flags.keys():
         if public_flags >= item:
