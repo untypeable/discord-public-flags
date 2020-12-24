@@ -29,14 +29,6 @@ if(isset($_GET['discord_id'])) {
 
     $str_flags = array();
 
-    foreach($flags as $key => $value) {
-      if($public_flags == $key) {
-        array_push($str_flags,$value);
-        $public_flags = $public_flags - $key;
-        break;
-      }
-    }
-
     while($public_flags != 0) {
       foreach($flags as $key => $value) {
         if($public_flags >= $key) {
